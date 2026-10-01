@@ -1,6 +1,6 @@
 # Lumi Landing Design System
 
-Revision: Civic Editorial Intelligence + restrained liquid glass · September 2026
+Revision: Civic Editorial Intelligence + restrained liquid glass + Tabler-based iconography · October 2026
 
 > Marketing adaptation of the canonical Lumi design language in
 > `RunLumi/lumi-agents/DESIGN.md`. The shared Lumi identity is authoritative.
@@ -422,7 +422,42 @@ unsupported ROI or claims about what “every leading company” is doing.
 
 # 10. Iconography
 
-Use minimal line geometry that feels related to the folded-L mark:
+## 10.1 Familiar geometry: Tabler Outline
+
+Use **Tabler Outline** as the geometric foundation for functional and product icons.
+The [official Tabler Icons specification](https://tabler.io/icons) uses a 24×24 grid
+and a 2px stroke. Preserve the original paths, proportions, negative space, rounded
+line caps and joins so familiar symbols remain recognizable at small sizes.
+
+- Default SVG contract: `viewBox="0 0 24 24"`, `fill="none"`, `stroke="currentColor"`,
+  `stroke-width="2"`, `stroke-linecap="round"`, `stroke-linejoin="round"`.
+- Use 20–24px icons for ordinary UI; use 16px only for compact metadata where the
+  chosen symbol remains clear. Larger editorial icons retain the same geometry.
+- Choose the simplest recognizable symbol for the meaning. Do not redraw familiar
+  symbols into folded-L shapes or add detail inside the glyph to make it proprietary.
+- Use one outline family consistently; do not mix Tabler Outline with filled icons
+  or other icon packs. Keep the Lumi logo as its separate brand mark.
+- When distributing Tabler assets, retain the upstream MIT license notice.
+
+## 10.2 Lumi presentation: navy, blue and folded corners
+
+Lumi's own expression comes from **color and framing around the glyph**.
+Use Civic Navy (`#102a43`) for default icons and Lumi Blue (`#006093`) for selected,
+active or primary emphasis. Use the existing status colors only for actual status;
+retain a label or another cue so meaning never depends on color alone.
+
+For product chapter markers and selected editorial illustrations, place the intact
+Tabler glyph in a quiet paper or white frame with one folded corner. Align the fold
+with the existing folded-L geometry: a thin border, a small diagonal corner and,
+when meaningful, a blue rail or bracket. Keep clear space around the glyph; the fold
+must not overlap its silhouette, imply another symbol or become a second focal point.
+Do not add a framed tile to every navigation icon, row or button.
+
+At 16–20px, omit the decorative frame and fold if they crowd the symbol. Preserve
+recognition before ornament. Check icons at their actual rendered size on paper,
+white and the Civic Navy inversion; use a light foreground on navy for contrast.
+
+Supporting diagram and annotation geometry may use:
 
 - brackets;
 - rails;
@@ -430,7 +465,8 @@ Use minimal line geometry that feels related to the folded-L mark:
 - document corners;
 - simple directional paths.
 
-Stroke: 1.75–2px.
+Supporting lines may use 1.75–2px strokes; Tabler glyphs retain the standard 2px
+stroke in their 24×24 coordinate system. Diagram connectors remain governed by §8.2.
 
 Avoid:
 
@@ -442,7 +478,18 @@ Avoid:
 - mixed icon packs.
 
 The four-point clarity mark means Lumi found, clarified, or verified something useful.
-Use it rarely.
+Use it rarely; it must not replace a familiar functional icon or serve as a generic AI badge.
+
+## 10.3 Recognition and accessibility gate
+
+- Compare each icon with its upstream Tabler source; the glyph geometry stays intact.
+- Inspect 16px, 20px and 24px renderings wherever those sizes are used. Simplify the
+  symbol choice or remove framing if recognition suffers.
+- Give icon-only controls an accessible name and visible keyboard focus; keep the
+  touch target independent of the glyph size. Hide decorative SVGs from assistive
+  technology when adjacent text already supplies the meaning.
+- Check contrast on every material and state. A folded frame is brand presentation,
+  never the only signal of selection, status or interactivity.
 
 ---
 
@@ -622,6 +669,8 @@ Before merging a visual change:
 - [ ] Does the CTA describe the actual email action?
 - [ ] Is the page still unmistakably Lumi?
 - [ ] Are canonical colors unchanged?
+- [ ] Do functional icons preserve Tabler Outline geometry and remain recognizable at their rendered size?
+- [ ] Do navy/blue and folded-corner frames express Lumi without crowding glyphs or replacing semantic cues?
 - [ ] Is blue used as authority rather than decoration?
 - [ ] Is Paper White still the dominant canvas?
 - [ ] Does each section answer one question?
