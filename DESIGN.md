@@ -491,6 +491,38 @@ Use it rarely; it must not replace a familiar functional icon or serve as a gene
 - Check contrast on every material and state. A folded frame is brand presentation,
   never the only signal of selection, status or interactivity.
 
+## Development default: distinctive, useful icons
+
+Treat icon selection as design work. Icons should make an action immediately
+recognizable or give a service a concrete visual identity. Choose the most
+specific readable metaphor available; do not fill every section with the same
+checkmark, shield, globe, or generic AI sparkle. A consistent drawing language
+should still contain varied, purposeful silhouettes. Do not add icons to every
+heading merely to fill space.
+
+For implementations using this brand contract:
+
+- Preserve §10.1: functional and product glyphs keep intact Tabler Outline paths, proportions, a 24×24 viewBox, and 2px rounded strokes. Choose a more specific upstream symbol when needed; do not redraw it into an L-shape. Keep one outline family and its MIT notice.
+- Make documents, sources, handoffs, approvals, and bounded actions visually distinguishable rather than using the same shield or checkmark everywhere. Conventional menu, close, search, and directional controls stay familiar. Symbols must not imply unverified capabilities, customer results, or certification.
+- Follow §10.2 for Lumi character: Civic Navy defaults, Lumi Blue emphasis, and optional opaque paper/white folded-corner frames, rails, or brackets around prominent glyphs. Give the symbol clear space and remove framing at small sizes; do not badge every row or control.
+- Keep the folded-L logo and four-point clarity mark as separate brand assets with their existing meanings. Repeated glyphs should have one owning component in the consuming product, not scattered SVG copies. This repository defines guidance; it has no product runtime or icon component to install.
+
+Before shipping an icon change, review the glyphs together at their actual
+rendered sizes, including 16/20/24px where used. Check recognizable silhouettes,
+optical balance, consistent strokes, negative space, and contrast on every
+material and state. Remove framing or simplify the symbol if it crowds the glyph.
+Keep visible labels for unfamiliar actions; icon-only controls need an accessible
+name, visible keyboard focus, and a hit area independent of drawing size. Hide
+decorative SVGs from assistive technology when text or a named control supplies
+the meaning. Essential status also needs text, never color or a mark alone.
+
+Inspect supported locales at 320/375/768/1440px, including long Vietnamese labels
+and diacritics, touch and keyboard use, and forced colors. Keep glyphs from
+shrinking or colliding with text. Follow the existing motion rules; no decorative
+bounce, glow, or continuous spinning. Replace vague or repetitive metaphors;
+remove decoration that contributes no meaning. These are acceptance requirements
+for future implementation, not evidence that a UI change has shipped.
+
 ---
 
 # 11. Photography
